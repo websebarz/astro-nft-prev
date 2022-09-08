@@ -7,17 +7,44 @@ import Card from '../components/Card.astro';
 	<main>
 		<h1 class="text-gradient">websebarz</h1>
 	</main>
-	<div>
+	<div class="card--el">
+		<img src="../imgs/image-equilibrium.jpg" class="img-preview--el" alt="nft jpg preview">
 		<h1 class="title--el">Equilibrium #3429</h1>
+		<p class="info--el">Our Equilibrium collection promotes balance and calm.</p>
+		<div class="flex-container tag--el">
+			<div class="flex-container price--el">
+				<span class="eth--el">
+					<svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
+					
+				</span>
+				<span>0.041 ETH</span>
+			</div>
+			<div class="flex-container left--el">
+				<span class="clock--el">
+					<svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
+				</span>
+				<span>3 days left</span>
+			</div>
+		</div>
+		<hr class="line--el">
+		<div class="flex-container-secondary author--el">
+			<span>
+				<img class="avatar--el" src="../imgs/image-avatar.png" alt="pfp of author">
+			</span>
+			<span>
+				<p class="id--el">Creation of <span class="author-name--el">Jules Wyvern</span></p>
+			</span>
+		</div>
 	</div>
 </Layout>
 
 <style>
 	:root {
 		--astro-gradient: linear-gradient(90deg, rgba(240,93,8,1) 0%, rgba(252,151,9,1) 35%);
-		--color-primary-card: hsl(215, 32%, 27%);	
+		--color-primary-card: hsl(216, 50%, 16%);	
 		--color-primary-soft: hsl(215, 51%, 70%);
-		--color-primary-cyan: hsl(178, 100%, 50%)
+		--color-primary-cyan: hsl(178, 100%, 50%);
+		--color-primary-line: hsl(215, 32%, 27%);
 
 	}
 
@@ -26,9 +53,92 @@ import Card from '../components/Card.astro';
 	}
 
 	.title--el {
-		font-size: 2em;
+		font-size: 1.5em;
+		color: #fff;
+		align-self: flex-start;
+		margin-bottom: 1em;
+		font-weight: 400;
+	}
+
+	.card--el {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.img-preview--el {
+		max-width: 100%;
+		border-radius: 1em;
+	}
+
+	.info--el {
+		margin-top: 0;
+		font-size: 1em;
+		color: var(--color-primary-soft);
+	}
+
+	.tag--el {
+		width: 100%;
+	}
+
+	.price--el {
+		color: var(--color-primary-cyan);
+	}
+
+	.eth--el {
+		margin-right: 0.225em;
+	}
+
+	.left--el {
+		color: var(--color-primary-soft);
+	}
+
+	.clock--el {
+		margin-right: 0.225em
+	}
+
+	.line--el {
+		width: 100%;
+		border: 1px solid var(--color-primary-line);
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.author--el {
+		width: 100%;
+	}
+
+	.author-name--el {
 		color: #fff;
 	}
+
+	.avatar--el {
+		width: 35px;
+		border: 1px solid #fff;
+		border-radius: 100%;
+		margin-right: 1em;
+	}
+
+	.id--el {
+		color: var(--color-primary-soft);
+	}
+
+	.flex-container {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.flex-container-secondary {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+
+
 
 	main {
 		margin: auto;
@@ -43,7 +153,7 @@ import Card from '../components/Card.astro';
 		max-width: 60ch;
 		max-height: fit-content;
 		background-color: var(--color-primary-card);
-		border-radius: 2em;
+		border-radius: 1em;
 	}
 
 	.text-gradient {
